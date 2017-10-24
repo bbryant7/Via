@@ -6,3 +6,14 @@ body{
   width: 100%;
   height: 300px;
 }
+
+
+#waypoints{
+  display:flex;
+  flex-direction: column;
+  height: 120px;
+}
+
+#waypoints input{
+  flex-direction: column;
+}

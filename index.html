@@ -8,6 +8,32 @@
   <body>
     <h1> Welcome To Austin</h1>
     <div id="map"></div>
+
+    <div id="form">
+    <h4>Start:</h4>
+    <select id="start">
+      <option value="Austin, TX">Austin, TX</option>
+    </select>
+    <h4>Austin HotSpots:</b>
+      <select multiple id="waypoints">
+        <option value=" 1100 Congress Ave">State Capitol</option>
+        <option value="110 Inner Campus Drive">UT Campus</option>
+        <option value="1800 Congress Ave">Bob Bullok State History Museum</option>
+        <option value="101 Baylor St. Austin, TX">Hope Outdoor Gallery</option>
+        <option value="713 Congress Ave">Paramount theatre</option>
+        <option value="407 E 6th St.">6th Street Bar District</option>
+        <option value="900 W Riverside Dr">Autotorium Shores</option>
+        <option value="817 W 5th St">Tiniest Bar in Texas</option>
+        <option value="2131 William Barton Dr">Barton Springs</option>
+        <option value="Congress Ave">Congress Bat Bridge</option>
+
+      </select>
+      <h4>End:</h4>
+    <select id="end">
+      <option value="Austin, TX">Austin, TX</option>
+    </select>
+    <button type="submit" id="submit">Make My Route</button>
+  </div>
   <script>
 
     navigator.geolocation.getCurrentPosition(displayLocation);
@@ -44,3 +70,16 @@
       </script>
   </body>
 </html>
+
+<!-- <option value=" 1100 Congress Ave">State Capitol</option>
+<input type="checkbox" value=" 1100 Congress Ave">State Capitol</input>
+<input type="checkbox" value="110 Inner Campus Drive">UT Campus</input>
+<input type="checkbox" value="1800 Congress Ave">Bob Bullok State History Museum</input>
+<input type="checkbox" value="101 Baylor St. Austin, TX">Hope Outdoor Gallery</input>
+<input type="checkbox" value="713 Congress Ave">Paramount theatre</input>
+<input type="checkbox" value="407 E 6th St.">6th Street Bar District</input>
+<input type="checkbox" value="900 W Riverside Dr">Autotorium Shores</input>
+<input type="checkbox" value="817 W 5th St">Tiniest Bar in Texas</input>
+<input type="checkbox" value="2131 William Barton Dr">Barton Springs</input>
+<input type="checkbox" value="Congress Ave">Congress Bat Bridge</input>
+ -->
