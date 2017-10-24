@@ -19,7 +19,6 @@
       let current = new google.maps.LatLng(latitude, longitude)
       console.log('displayLocation function ran')
 
-
       showMap(current);
 
     }
@@ -31,6 +30,11 @@
       };
       let map = new google.maps.Map(document.getElementById('map'), options)
       console.log('showMap function ran')
+
+      let marker = new google.maps.Marker({
+        position: current,
+        map: map
+      })
 
     }
   </script>
