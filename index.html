@@ -15,6 +15,7 @@
       <option value="Austin, TX">Austin, TX</option>
     </select>
     <h4>Austin HotSpots:</b>
+      <p> Select the Austin hotspots you can't leave the city without seeing, and we'll make an easy map to help you get to know your city!</p>
       <select multiple id="waypoints">
         <option value=" 1100 Congress Ave">State Capitol</option>
         <option value="110 Inner Campus Drive">UT Campus</option>
@@ -26,7 +27,6 @@
         <option value="817 W 5th St">Tiniest Bar in Texas</option>
         <option value="2131 William Barton Dr">Barton Springs</option>
         <option value="Congress Ave">Congress Bat Bridge</option>
-
       </select>
       <h4>End:</h4>
     <select id="end">
@@ -34,6 +34,8 @@
     </select>
     <button type="submit" id="submit">Make My Route</button>
   </div>
+
+
   <script>
 
     navigator.geolocation.getCurrentPosition(displayLocation);
@@ -50,19 +52,28 @@
     }
 
     function showMap(current) {
-      let options = {
+      let directionsService = new google.maps.DirectionsService;
+      let directionsDisplay = new google.maps.DirectionsRenderer;
+      let map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
-        center: current,
-      };
-      let map = new google.maps.Map(document.getElementById('map'), options)
+        center: current})
       console.log('showMap function ran')
-
       let marker = new google.maps.Marker({
         position: current,
         map: map
       })
 
+      directionsDisplay.setMap(map);
+
+      document.getElementById('submit').addEventListener('click', function() {
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+      });
+
     }
+
+
+
+
   </script>
 
 
