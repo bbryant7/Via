@@ -7,6 +7,36 @@
   </head>
   <body>
     <h1> Welcome To Austin</h1>
+    <div id="map"></div>
+  <script>
 
+    navigator.geolocation.getCurrentPosition(displayLocation);
+
+    function displayLocation(position) {
+      // current coordinates
+      let latitude = position.coords.latitude;
+      let longitude = position.coords.longitude;
+      let current = new google.maps.LatLng(latitude, longitude)
+      console.log('displayLocation function ran')
+
+
+      showMap(current);
+
+    }
+
+    function showMap(current) {
+      let options = {
+        zoom: 12,
+        center: current,
+      };
+      let map = new google.maps.Map(document.getElementById('map'), options)
+      console.log('showMap function ran')
+
+    }
+  </script>
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCq04ArY70ba05n6sTkDx0VldkX1fVtCg">
+      </script>
   </body>
 </html>
