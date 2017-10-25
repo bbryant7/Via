@@ -1,9 +1,37 @@
+/*fonts:
+font-family: 'Chewy', cursive;
+font-family: 'Lato', sans-serif;
+*/
+
+/*
+colors: #70CDCC (blue) or #00B9AD
+        #36C3C8 (white)
+        #FA5934 (red)
+        #FFDBB1 (beige)
+        #FE5B32 (yellow)
+        #A7A8AC (A7A8AC)
+*/
 body{
-  background-color: aliceblue;
+  background-color: #70CDCC;
+  color: #FA5934;
+  font-family: 'Lato', sans-serif;
 }
 
+h1{
+  font-family: 'Chewy', cursive;
+  text-align: center;
+}
+
+button {
+    background-color: #FFDBB1;
+    border-style: none;
+    padding: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #FA5934;
+}
 #map{
-  width: 90%;
+  max-width: 100%;
   height: 500px;
 }
 
