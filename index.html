@@ -44,8 +44,12 @@
       // current coordinates
       let latitude = position.coords.latitude;
       let longitude = position.coords.longitude;
+      console.log("start", start);
       let current = new google.maps.LatLng(latitude, longitude)
       console.log('displayLocation function ran')
+      console.log("latitude", latitude);
+      console.log("longitude",longitude);
+      console.log("current", current);
 
       showMap(current);
 
@@ -67,10 +71,21 @@
 
       document.getElementById('submit').addEventListener('click', function() {
         calculateAndDisplayRoute(directionsService, directionsDisplay);
+        console.log('fire!');
       });
 
     }
-
+    function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+      let waypoints = [];
+      let waypointsOptions = document.getElementById('waypoints');
+      for (var i = 0; i < waypointsOptions.length; i++) {
+        if (waypointsOptions.options[i].selected) {
+          waypoints.push({
+            location: waypointsOptions[i].value,
+            stopover: true
+          });
+        }
+      }
 
 
 
