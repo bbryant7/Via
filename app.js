@@ -1,105 +1,94 @@
-
+const mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
+mongoose.connect('mongodb://localhost:27017/snippetdb');
 const express = require('express');
-const session = require('express-session');
 const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const userDataSchema = require('./models/userData')
 const app = express();
 
 app.engine('mustache', mustacheExpress());
 app.set('views', './views')
 app.set('view engine', 'mustache')
+app.use(express.static('./Public/'));
 app.use(bodyParser.urlencoded({
   extended: false
 }));
 
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}))
+
+app.use(function(req, res, next) {
+  console.log('in interceptor');
+  if (req.url === '/login') {
+    next()
+    console.log(1);
+  } else if (req.url === '/registration') {
+    next()
+    console.log(4);
+  } else if (!req.session.username) {
+    console.log(2);
+    res.render('login')
+
+  } else {
+    console.log(3);
+    next()
+  }
+})
+
+
+// LOGIN PAGE
+app.post('/login', function(req, res) {
+  userDataSchema.findOne().where({
+      username: req.body.username,
+      password: req.body.password
+}) .then(function(results){
+    console.log(results);
+    if (results !== null){
+      req.session.username = req.body.username;
+    }
+  if (req.session.username === req.body.username) {
+      res.render('index')
+      console.log("correct Password");
+  } else {
+    res.render('login', {
+      error: "Incorrect username or password."
+    });
+    console.log("wrong password");
+  }
+})
+})
+
+// link to registration page
+app.get('/registration', function(req, res) {
+    res.render('registration')
+});
+
+// REGISTRATION PAGE
+
+app.post('/registration', function(req, res) {
+  if (req.body.regpassword === req.body.confirmpassword) {
+    const newUser = new userDataSchema({
+      username: req.body.regusername,
+      password: req.body.regpassword
+    })
+    newUser.save()
+    .then(function(){
+        res.render('index');
+      })
+} else {
+  res.render('registration',{passerror: "Password does not match."})
+}
+})
 
 app.get('/', function(req, res) {
     res.render('index');
 
   })
-
-navigator.geolocation.getCurrentPosition(displayLocation);
-let latitude;
-let longitude;
-
-function displayLocation(position) {
-  // current coordinates
-  // latitude and longitude are numbers
-  latitude = position.coords.latitude;
-  longitude = position.coords.longitude;
-  let start = `"${latitude}, ${longitude}"`;
-  console.log("start", start);
-  let current = new google.maps.LatLng(latitude, longitude)
-  console.log('displayLocation function ran')
-  console.log("latitude", latitude);
-  console.log("longitude", longitude);
-  console.log("current", current);
-
-  showMap(current);
-
-}
-
-function showMap(current) {
-  let directionsService = new google.maps.DirectionsService;
-  let directionsDisplay = new google.maps.DirectionsRenderer;
-  let map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: current
-  })
-  console.log('showMap function ran')
-  let marker = new google.maps.Marker({
-    position: current,
-    map: map
-  })
-
-  directionsDisplay.setMap(map);
-
-  document.getElementById('submit').addEventListener('click', function() {
-    calculateAndDisplayRoute(directionsService, directionsDisplay);
-    console.log('fire!');
-  });
-
-}
-
-function calculateAndDisplayRoute(directionsService, directionsDisplay, position) {
-  let start = `"${latitude}, ${longitude}"`;
-  console.log("start", start);
-  let waypoints = [];
-  let waypointsOptions = document.getElementById('waypoints');
-  for (var i = 0; i < waypointsOptions.length; i++) {
-    if (waypointsOptions.options[i].selected) {
-      waypoints.push({
-        location: waypointsOptions[i].value,
-        stopover: true
-      });
-    }
-  }
-  directionsService.route({
-    origin: start,
-    destination: document.getElementById('end').value,
-    waypoints: waypoints,
-    optimizeWaypoints: true,
-    travelMode: 'DRIVING'
-  }, function(response, status) {
-    if (status === 'OK') {
-      directionsDisplay.setDirections(response);
-      var route = response.routes[0];
-      var summaryPanel = document.getElementById('directions-panel');
-      summaryPanel.innerHTML = '';
-      // For each route, display summary information.
-      for (var i = 0; i < route.legs.length; i++) {
-        var routeSegment = i + 1;
-        summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
-          '</b><br>';
-        summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
-        summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-        summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
-      }
-    } else {
-      window.alert('Directions request failed due to ' + status);
-    }
-  });
-}
 
 app.listen(3000, function() {
   console.log('Successfully started express application!');

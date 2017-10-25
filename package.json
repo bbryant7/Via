@@ -18,8 +18,11 @@
   "homepage": "https://github.com/bbryant7/Welcome-To-Austin#readme",
   "description": "",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^4.10.8",
     "mustache": "^2.3.0",
     "mustache-express": "^1.2.5"
   }
