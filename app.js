@@ -13,6 +13,11 @@ app.use(bodyParser.urlencoded({
 }));
 
 
+app.get('/', function(req, res) {
+    res.render('index');
+
+  })
+
 navigator.geolocation.getCurrentPosition(displayLocation);
 let latitude;
 let longitude;
