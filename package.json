@@ -1,0 +1,26 @@
+{
+  "name": "welcomtoaustin",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbryant7/Welcome-To-Austin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbryant7/Welcome-To-Austin/issues"
+  },
+  "homepage": "https://github.com/bbryant7/Welcome-To-Austin#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.5"
+  }
+}

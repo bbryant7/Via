@@ -1,3 +1,18 @@
+
+const express = require('express');
+const session = require('express-session');
+const mustacheExpress = require('mustache-express');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.engine('mustache', mustacheExpress());
+app.set('views', './views')
+app.set('view engine', 'mustache')
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+
+
 navigator.geolocation.getCurrentPosition(displayLocation);
 let latitude;
 let longitude;
@@ -80,3 +95,16 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, position
     }
   });
 }
+
+app.listen(3000, function() {
+  console.log('Successfully started express application!');
+})
+
+
+process.on('SIGINT', function() {
+  console.log("\nshutting down");
+  mongoose.connection.close(function() {
+    console.log('Mongoose default connection disconnected on app termination');
+    process.exit(0);
+  });
+});
