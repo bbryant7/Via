@@ -2,29 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>{{title}}</title>
   </head>
   <body>
-  {{#routes}}
-
     <h1> Suggested Routes </h1>
+    {{#route}}
+    <div class="route-tiles">
     <h2> {{title}}</h2>
-
-  {{/routes}}
-
-  <div id="suggested-map"></div>
+    <img src={{img}}>
+    <p>{{details}}</p>
+    </div>
+    {{/route}}
 
   <nav>
     <a href= "/"> Create Map</a>
     <a href= "/routesuggestions"> Suggested Routes</a>
-    <a href= "#"> More Info</a>
-    <a href= "#"> Log Out</a>
+    <a href= "/login"> More Info</a>
+    <a href= "/login"> Log Out</a>
   </nav>
 
 
 
   <script src="suggestedmap.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCq04ArY70ba05n6sTkDx0VldkX1fVtCg">
   </body>
 </html>
