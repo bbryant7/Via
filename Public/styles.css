@@ -13,12 +13,12 @@ colors: #70CDCC (blue) or #00B9AD
 */
 body{
   background-color: #70CDCC;
-  color: #FA5934;
+  color: white;
   font-family: 'Lato', sans-serif;
+  line-height: 1.4;
 }
 
-h1{
-  font-family: 'Chewy', cursive;
+h1, h2{
   text-align: center;
 }
 

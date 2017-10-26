@@ -12,3 +12,40 @@
 // const savedRoutes = mongoose.model('savedRoutes', savedRoutesSchema);
 //
 // module.exports = savedRoutes;
+directionsService.route({
+  origin: start,
+  destination: document.getElementById('end').value,
+  waypoints: waypoints,
+  optimizeWaypoints: true,
+  travelMode: 'DRIVING'
+}, function(response, status) {
+  if (status === 'OK') {
+    // visiual display of route legs
+      directionsDisplay.setDirections(response);
+
+      // }
+    console.log("woohooo!!")
+  } else {
+    window.alert('Directions request failed due to ' + status);
+  }
+});
+}
+
+let test = {
+  Origin: "Austin, Tx",
+  Destination: "Austin, TX",
+  wapoints: [
+    {
+      location: "x",
+      stopover: true
+    },{
+      location: "y",
+      stopover: true
+    },{
+      location: "x",
+      stopover: true
+    }
+    ],
+  optimize: true,
+  travelMode:'DRIVING'
+}

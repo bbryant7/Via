@@ -10,11 +10,14 @@
 
 <body>
   <h1> Welcome To Austin</h1>
-  <div id="map"></div>
+  <h2> Find the spots you can't leave without seeing first! </h2>
+  <div class="waypoints-info">
+  </div>
 
-  <div id="form">
-    <h4>Austin HotSpots:</b>
-      <p> Select the Austin hotspots you can't leave the city without seeing, and we'll make an easy map to help you get to know your city!</p>
+  <div id="create-form">
+    <h3>Austin HotSpots:</h3>
+    <p> Select the Austin hotspots you can't leave the city without seeing, and we'll make an easy map to help you get to know your city!</p>
+    <form id="create">
       <select multiple id="waypoints">
         <option value=" 1100 Congress Ave">State Capitol</option>
         <option value="110 Inner Campus Drive">UT Campus</option>
@@ -27,29 +30,28 @@
         <option value="2131 William Barton Dr">Barton Springs</option>
         <option value="Congress Ave">Congress Bat Bridge</option>
       </select>
-      <h4>End:</h4>
-    <select id="end">
-      <option value="Austin, TX">Austin, TX</option>
-    </select>
-    <button type="submit" id="submit">Make My Route</button>
+      <h3>End:</h3>
+      <input id="end" name="end" value="Austin, TX" placeholder="Example: 14835 Bescott Dr. Austin, TX">
+      </input>
+      <button type="submit" id="submit">Make My Route</button>
+    </form>
   </div>
+
+  <div id="map"></div>
+
 
   <script src="map.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCq04ArY70ba05n6sTkDx0VldkX1fVtCg">
   </script>
 </body>
+  <form id="save-form">
+    <button type="submit" id="submit">Save My Route</button>
+  </form>
+  <nav>
+    <a href= "#"> Create Map</a>
+    <a href= "#"> Suggested Routes</a>
+    <a href= "#"> More Info</a>
+    <a href= "#"> Log Out</a>
+  </nav>
 
 </html>
-
-<!-- <option value=" 1100 Congress Ave">State Capitol</option>
-<input type="checkbox" value=" 1100 Congress Ave">State Capitol</input>
-<input type="checkbox" value="110 Inner Campus Drive">UT Campus</input>
-<input type="checkbox" value="1800 Congress Ave">Bob Bullok State History Museum</input>
-<input type="checkbox" value="101 Baylor St. Austin, TX">Hope Outdoor Gallery</input>
-<input type="checkbox" value="713 Congress Ave">Paramount theatre</input>
-<input type="checkbox" value="407 E 6th St.">6th Street Bar District</input>
-<input type="checkbox" value="900 W Riverside Dr">Autotorium Shores</input>
-<input type="checkbox" value="817 W 5th St">Tiniest Bar in Texas</input>
-<input type="checkbox" value="2131 William Barton Dr">Barton Springs</input>
-<input type="checkbox" value="Congress Ave">Congress Bat Bridge</input>
- -->
