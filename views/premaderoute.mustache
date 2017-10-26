@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Chewy|Lato" rel="stylesheet">
+  {{#route}}
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <h1> {{title}}</h1>
+  <h2> {{details}}</h2>
+  <div class="waypoints-info">
+  </div>
+  {{/route}}
+
+  <div id="map"></div>
+
+
+  <script src="mapsuggestion.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCq04ArY70ba05n6sTkDx0VldkX1fVtCg">
+  </script>
+</body>
+
+  <nav>
+    <a href= "/"> Create Map</a>
+    <a href= "/routesuggestions"> Suggested Routes</a>
+    <a href= "#"> More Info</a>
+    <a href= "#"> Log Out</a>
+  </nav>
+
+</html>

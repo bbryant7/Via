@@ -116,13 +116,15 @@ app.get('/', function(req, res) {
 
 // SUGGESTIONPAGE
 app.get('/routesuggestions', function(req, res) {
-  // data.findOne().where({
-  //_id: (req.params.id)
     console.log("data",data);
     res.render('routesuggestions', {route: data})
     })
-// console.log(req.params.id);
-  // });
+
+// PREMADE ROUTE - MAP PAGE
+
+app.get('/premade-route', function(req, res) {
+    res.render('premaderoute', {route: data})
+    })
 
 app.listen(3000, function() {
   console.log('Successfully started express application!');
