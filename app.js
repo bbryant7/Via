@@ -85,10 +85,21 @@ app.post('/registration', function(req, res) {
 }
 })
 
+// MAIN PAGE
 app.get('/', function(req, res) {
     res.render('index');
 
   })
+
+// SUGGESTIONPAGE
+  app.get('/routesuggestions', function(req, res) {
+    // data.findOne().where({
+    //   _id: (req.params.id)
+
+      res.render('routesuggestions')
+    })
+    // console.log(req.params.id);
+  // });
 
 app.listen(3000, function() {
   console.log('Successfully started express application!');

@@ -30,22 +30,3 @@ directionsService.route({
   }
 });
 }
-
-let test = {
-  Origin: "Austin, Tx",
-  Destination: "Austin, TX",
-  wapoints: [
-    {
-      location: "x",
-      stopover: true
-    },{
-      location: "y",
-      stopover: true
-    },{
-      location: "x",
-      stopover: true
-    }
-    ],
-  optimize: true,
-  travelMode:'DRIVING'
-}
