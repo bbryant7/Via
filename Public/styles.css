@@ -19,6 +19,24 @@ body{
   margin: 5%;
 }
 
+nav{
+  background-color: #455051;
+  padding: 1%;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav a:hover {
+  color: #FD5635;
+
+}
+
 h1, h2, h3, h4 {
 font-family: 'Zilla Slab', serif;
 	font-weight: 700;
@@ -28,13 +46,12 @@ font-family: 'Zilla Slab', serif;
   text-align: center;
 }
 
-/*button {
+button {
   display: inline-block;
 	font-size: 1em;
 	font-weight: 700;
 	text-transform: uppercase;
   letter-spacing: .15em;
-	max-width: 200px;
 	padding: 0.7em 1.4em;
   background: #035A5E;
 	border: 0 solid black;
@@ -44,7 +61,7 @@ font-family: 'Zilla Slab', serif;
 
 	&:hover, &:focus {
 	}
-}*/
+}
 
 .login-wrapper{
   background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");

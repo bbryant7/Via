@@ -71,23 +71,23 @@ app.use(session({
   saveUninitialized: true
 }))
 
-app.use(function(req, res, next) {
-  console.log('in interceptor');
-  if (req.url === '/login') {
-    next()
-    console.log(1);
-  } else if (req.url === '/registration') {
-    next()
-    console.log(4);
-  } else if (!req.session.username) {
-    console.log(2);
-    res.render('login')
-
-  } else {
-    console.log(3);
-    next()
-  }
-})
+// app.use(function(req, res, next) {
+//   console.log('in interceptor');
+//   if (req.url === '/login') {
+//     next()
+//     console.log(1);
+//   } else if (req.url === '/registration') {
+//     next()
+//     console.log(4);
+//   } else if (!req.session.username) {
+//     console.log(2);
+//     res.render('login')
+//
+//   } else {
+//     console.log(3);
+//     next()
+//   }
+// })
 
 
 // LOGIN PAGE
