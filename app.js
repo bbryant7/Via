@@ -11,7 +11,7 @@ const app = express();
 let data = [{
   "id": 1,
   "title":"North Austin Breweries",
-  "details":"lkajhsfklahjsdlfkjahsdlkfhaslkfjhaslkfjhaslkjfhaslkjhfalskjhfaskjhfaklsjhflaskhfalkjhsflasjkhfdlkasjhflkasjhfljhsalkjhflakshfdlaksjhdf",
+  "details":"lkajhsfklah jsdlfkjahsd lkfha slkfjhaslkf jhaslk jfhaslk jhfalskjhf askjhfaklsjh flaskhfalkjhs flasj khfdlkasj hflkasjhfl jhsalk jhflakshfdl aksjhdf",
   "img":"https://images.unsplash.com/photo-1438557068880-c5f474830377?w=1353&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
   "map":{
   },
@@ -71,23 +71,23 @@ app.use(session({
   saveUninitialized: true
 }))
 
-// app.use(function(req, res, next) {
-//   console.log('in interceptor');
-//   if (req.url === '/login') {
-//     next()
-//     console.log(1);
-//   } else if (req.url === '/registration') {
-//     next()
-//     console.log(4);
-//   } else if (!req.session.username) {
-//     console.log(2);
-//     res.render('login')
-//
-//   } else {
-//     console.log(3);
-//     next()
-//   }
-// })
+app.use(function(req, res, next) {
+  console.log('in interceptor');
+  if (req.url === '/login') {
+    next()
+    console.log(1);
+  } else if (req.url === '/registration') {
+    next()
+    console.log(4);
+  } else if (!req.session.username) {
+    console.log(2);
+    res.render('login')
+
+  } else {
+    console.log(3);
+    next()
+  }
+})
 
 
 // LOGIN PAGE
@@ -141,16 +141,16 @@ app.get('/', function(req, res) {
   })
 
 // SUGGESTIONPAGE
-// app.get('/routesuggestions', function(req, res) {
-//     console.log("data",data);
-//     res.render('routesuggestions', {route: data})
-//     })
+app.get('/routesuggestions', function(req, res) {
+    console.log("data",data);
+    res.render('routesuggestions', {route: data})
+    })
 
 // PREMADE ROUTE - MAP PAGE
 
-// app.get('/premade-route', function(req, res) {
-//     res.render('premaderoute', {route: data})
-//     })
+app.get('/premade-route', function(req, res) {
+    res.render('premaderoute', {route: data})
+    })
 
 app.listen(3000, function() {
   console.log('Successfully started express application!');

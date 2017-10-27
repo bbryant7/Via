@@ -23,12 +23,12 @@ h1, h2, h3, h4 {
 font-family: 'Zilla Slab', serif;
 	font-weight: 700;
 	line-height: 1.1;
-    font-size: 3.998em;
+    /*font-size: 3.998em;*/
   margin-bottom: .5em;
   text-align: center;
 }
 
-button {
+/*button {
   display: inline-block;
 	font-size: 1em;
 	font-weight: 700;
@@ -44,7 +44,7 @@ button {
 
 	&:hover, &:focus {
 	}
-}
+}*/
 
 .login-wrapper{
   background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
@@ -90,8 +90,6 @@ color: #455051;
   max-width: 90%;
   height: 500px;
 }
-
-.login
 
 
 #waypoints{
