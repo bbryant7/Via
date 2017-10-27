@@ -12,23 +12,74 @@ colors: #70CDCC (blue) or #00B9AD
         #A7A8AC (A7A8AC)
 */
 body{
-  background-color: #70CDCC;
-  color: white;
-  font-family: 'Lato', sans-serif;
+  color: #455051;
+	background: #D8E1E9;
+  font-family: 'Lato', serif;
   line-height: 1.4;
+  margin: 5%;
 }
 
-h1, h2{
+h1, h2, h3, h4 {
+font-family: 'Zilla Slab', serif;
+	font-weight: 700;
+	line-height: 1.1;
+    font-size: 3.998em;
+  margin-bottom: .5em;
   text-align: center;
 }
 
 button {
-    background-color: #FFDBB1;
-    border-style: none;
-    padding: 6px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #FA5934;
+  display: inline-block;
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+  letter-spacing: .15em;
+	max-width: 200px;
+	padding: 0.7em 1.4em;
+  background: #035A5E;
+	border: 0 solid black;
+  color: white;
+  font-family: "Zilla Slab";
+
+
+	&:hover, &:focus {
+	}
+}
+
+.login-wrapper{
+  background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size: cover;
+  background-position: center;
+  margin:auto 0;
+
+}
+
+.splash{
+  /*background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");*/
+  /*margin: auto 0;
+  background-size: cover;
+  background-position: center;
+  padding: 15%;
+  color: #035A5E;*/
+}
+.login-page-links a{
+  text-decoration: none;
+  font-size: .5em;
+  color: #FD5635
+}
+
+input{
+width: 90%;
+background-color: white;
+font-size: 1.2em;
+padding: 4px;
+border-radius: 5%;
+border-style: none;
+color: #455051;
+}
+
+.sign-in{
+  width: 90%;
 }
 #map{
   max-width: 100%;
@@ -39,6 +90,8 @@ button {
   max-width: 90%;
   height: 500px;
 }
+
+.login
 
 
 #waypoints{

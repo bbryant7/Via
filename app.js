@@ -141,16 +141,16 @@ app.get('/', function(req, res) {
   })
 
 // SUGGESTIONPAGE
-app.get('/routesuggestions', function(req, res) {
-    console.log("data",data);
-    res.render('routesuggestions', {route: data})
-    })
+// app.get('/routesuggestions', function(req, res) {
+//     console.log("data",data);
+//     res.render('routesuggestions', {route: data})
+//     })
 
 // PREMADE ROUTE - MAP PAGE
 
-app.get('/premade-route', function(req, res) {
-    res.render('premaderoute', {route: data})
-    })
+// app.get('/premade-route', function(req, res) {
+//     res.render('premaderoute', {route: data})
+//     })
 
 app.listen(3000, function() {
   console.log('Successfully started express application!');
