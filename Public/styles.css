@@ -35,6 +35,11 @@ button {
   height: 500px;
 }
 
+#curated-map{
+  max-width: 90%;
+  height: 500px;
+}
+
 
 #waypoints{
   display:flex;

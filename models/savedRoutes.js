@@ -12,27 +12,27 @@
 // const savedRoutes = mongoose.model('savedRoutes', savedRoutesSchema);
 //
 // module.exports = savedRoutes;
-directionsService.route({
-  origin: start,
-  destination: document.getElementById('end').value,
-  waypoints: waypoints,
-  optimizeWaypoints: true,
-  travelMode: 'DRIVING'
-}, function(response, status) {
-  if (status === 'OK') {
-    // visiual display of route legs
-      directionsDisplay.setDirections(response);
-
-      // }
-    console.log("woohooo!!")
-  } else {
-    window.alert('Directions request failed due to ' + status);
-  }
-});
-}
-
-id: 1,
-"title":"North Austin Breweries",
+// directionsService.route({
+//   origin: start,
+//   destination: document.getElementById('end').value,
+//   waypoints: waypoints,
+//   optimizeWaypoints: true,
+//   travelMode: 'DRIVING'
+// }, function(response, status) {
+//   if (status === 'OK') {
+//     // visiual display of route legs
+//       directionsDisplay.setDirections(response);
+//
+//       // }
+//     console.log("woohooo!!")
+//   } else {
+//     window.alert('Directions request failed due to ' + status);
+//   }
+// });
+// }
+//
+// id: 1,
+// "title":"North Austin Breweries",
 // "stops": [
 //   "Origin": "2314 Rutland Dr Austin, Tx",
 //   "Destination": "3001 Industrial Terrace Austin, TX",
@@ -45,5 +45,5 @@ id: 1,
 //     "stopover": true
 //   }
 //   ],
-  "optimize": true,
-  "travelMode":'DRIVING',
+  // "optimize": true,
+  // "travelMode":'DRIVING',

@@ -16,7 +16,7 @@ function displayLocation(position) {
 function showMap(current) {
   let directionsService = new google.maps.DirectionsService;
   let directionsDisplay = new google.maps.DirectionsRenderer;
-  let map = new google.maps.Map(document.getElementById('map'), {
+  let map = new google.maps.Map(document.getElementById('curated-map'), {
     zoom: 12,
     center: current
   })
@@ -27,33 +27,20 @@ function showMap(current) {
   })
 
   directionsDisplay.setMap(map);
-
-  document.getElementById('submit').addEventListener('click', function() {
-    calculateAndDisplayRoute(directionsService, directionsDisplay);
-    console.log('fire!');
-  });
-
+  calculateAndDisplayRoute(directionsService, directionsDisplay);
+  console.log('fire!');
 }
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay, position) {
-  let start = `"${latitude}, ${longitude}"`;
-  console.log("start", start);
-  let waypoints = [];
-  let waypointsOptions = document.getElementById('waypoints');
-  for (var i = 0; i < waypointsOptions.length; i++) {
-    if (waypointsOptions.options[i].selected) {
-      waypoints.push({
-        location: waypointsOptions[i].value,
-        stopover: true
-      });
-    }
-  }
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   directionsService.route({
-    origin: start,
-    destination: document.getElementById('end').value,
-    waypoints: waypoints,
+    origin: "14835 Bescott Dr.",
+    destination: "11500 Jollyville Road",
+    waypoints: [{
+      location: "101 Baylor St. Austin, TX",
+      stopover: true
+    }],
     optimizeWaypoints: true,
-    travelMode: 'DRIVING'
+    travelMode: 'WALKING'
   }, function(response, status) {
     if (status === 'OK') {
 
