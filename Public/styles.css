@@ -11,6 +11,13 @@ colors: #70CDCC (blue) or #00B9AD
         #FE5B32 (yellow)
         #A7A8AC (A7A8AC)
 */
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 body{
   color: #455051;
 	background: #D8E1E9;
@@ -63,40 +70,48 @@ button {
 	}
 }
 
-.login-wrapper{
+#login{
   background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
-  background-size: cover;
-  background-position: center;
-  margin:auto 0;
 
 }
 
-.splash{
-  /*background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");*/
-  /*margin: auto 0;
-  background-size: cover;
-  background-position: center;
-  padding: 15%;
-  color: #035A5E;*/
+#login body{
+  vertical-align: center;
+}
+
+.login-page-links {
+  display: flex;
+  justify-content: center;
 }
 .login-page-links a{
   text-decoration: none;
-  font-size: .5em;
-  color: #FD5635
+  color: #FD5635;
+  margin-right: 2%;
+}
+
+.login-page-links a:hover{
+  color: #035A5E
 }
 
 input{
 width: 90%;
+display:block;
+margin: 0 auto;
 background-color: white;
 font-size: 1.2em;
-padding: 4px;
-border-radius: 5%;
+padding: 0.7em 1.4em;
+border-radius: 5px;
 border-style: none;
 color: #455051;
+margin-bottom: 2%;
+
 }
 
 .sign-in{
   width: 90%;
+  display:block;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 #map{
   max-width: 100%;
