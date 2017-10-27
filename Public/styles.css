@@ -72,11 +72,11 @@ button {
 
 #login{
   background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  padding: 5%;
 
 }
-
-#login body{
-  vertical-align: center;
+#login-page{
+  margin: 0 auto;
 }
 
 .login-page-links {
@@ -113,6 +113,21 @@ margin-bottom: 2%;
   margin: 0 auto;
   border-radius: 5px;
 }
+
+#instructions{
+  margin: 5%;
+}
+
+.number{
+border: solid 2px #035A5E;
+border-radius: 32px;
+background-color: white;
+width: 65px;
+height: 65px;
+text-align: center;
+font-size: 3.0em;
+}
+
 #map{
   max-width: 100%;
   height: 500px;
