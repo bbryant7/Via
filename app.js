@@ -6,55 +6,10 @@ const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const userDataSchema = require('./models/userData')
+const data = require('./models/data.js')
 const app = express();
 
-let data = [{
-  "id": 1,
-  "title":"North Austin Breweries",
-  "details":"lkajhsfklah jsdlfkjahsd lkfha slkfjhaslkf jhaslk jfhaslk jhfalskjhf askjhfaklsjh flaskhfalkjhs flasj khfdlkasj hflkasjhfl jhsalk jhflakshfdl aksjhdf",
-  "img":"https://images.unsplash.com/photo-1438557068880-c5f474830377?w=1353&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
-  "map":{
-  },
-  "waypoints": [
-    {
-    "id":"1",
-    "name": "Adelbert's Brewery",
-    "description":"Massive brewery with Belgian-style ales offering weekend tours, happy hour plus seafood truck.",
-    "img":""
-    },{
-    "id":"2",
-    "name": "Oscar Blues",
-    "description": "Taproom featuring beers, on-site food trucks & live music in a large, industrial space.",
-    "img":""
-    },  {
-    "id":"3",
-    "name":"4th Tap",
-    "description":"Spacious worker-owned microbrewery with picnic tables & a projector screen in an industrial taproom",
-    "img":""
-    },  {
-    "id":"4",
-    "name":"Austin Beer Works",
-    "description":"Vibrant brewery crafting beers such as IPAs & ales, plus offering tours & tastings",
-    "img":""
-    },
-  ]
 
-},
-// {
-//   "id": 2,
-//   "title":"Explore Soco District",
-//   "details":"lkajhsfklahjsdlfkjahsdlkfhaslkfjhaslkfjhaslkjfhaslkjhfalskjhfaskjhfaklsjhflaskhfalkjhsflasjkhfdlkasjhflkasjhfljhsalkjhflakshfdlaksjhdf",
-//   "img":"http://www.videocityguide.com/austin/PCWUploads/South%20Congress%20Avenue%20Shopping/g3.jpg",
-//
-// },
-// {
-//   "id": 3,
-//   "title":"South-side Spots",
-//   "details":"lkajhsfklahjsdlfkjahsdlkfhaslkfjhaslkfjhaslkjfhaslkjhfalskjhfaskjhfaklsjhflaskhfalkjhsflasjkhfdlkasjhflkasjhfljhsalkjhflakshfdlaksjhdf",
-//   "img":"http://www.videocityguide.com/austin/PCWUploads/South%20Congress%20Avenue%20Shopping/thumbnails/g14.jpg",
-//
-// }
-]
 // /---------------------------/
 
 app.engine('mustache', mustacheExpress());
@@ -149,8 +104,18 @@ app.get('/routesuggestions', function(req, res) {
 // PREMADE ROUTE - MAP PAGE
 
 app.get('/premade-route', function(req, res) {
-    res.render('premaderoute', {route: data})
+  // let routeid = parseInt(req.params.id);
+  // function findRoute(data){
+  //   return data.id === routeid
+  // console.log(routeid);
+  // console.log(data.id)
+  // }
+  //     data.find(findRoute)
+  //     console.log(data.find(findRoute))
+      res.render('premaderoute', {route: data})
     })
+
+
 
 app.listen(3000, function() {
   console.log('Successfully started express application!');

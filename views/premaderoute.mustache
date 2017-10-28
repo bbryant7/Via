@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"></link>
+  <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css?family=Chewy|Lato" rel="stylesheet">
+  </head>
   {{#route}}
   <title>{{title}}</title>
-</head>
+
 
 <body>
   <h1> {{title}}</h1>
@@ -24,19 +26,19 @@
   </div>
   {{/route}}
 
-  <div id="curated-map"></div>
-
-
-  <script src="curatedmap.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCq04ArY70ba05n6sTkDx0VldkX1fVtCg">
-  </script>
-</body>
-
+  <div id="curated-map" style=" height:400px width: 5px;"></div>
   <nav>
     <a href= "/"> Create Map</a>
     <a href= "/routesuggestions"> Suggested Routes</a>
     <a href= "#"> More Info</a>
     <a href= "#"> Log Out</a>
   </nav>
+
+  <script src="curatedmap.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCq04ArY70ba05n6sTkDx0VldkX1fVtCg">
+  </script>
+</body>
+
+
 
 </html>

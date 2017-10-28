@@ -72,8 +72,12 @@ button {
 
 #login{
   background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
-  padding: 5%;
+  padding: 6%;
 
+}
+
+.splash {
+  font-size: 5em;
 }
 #login-page{
   margin: 0 auto;
@@ -82,6 +86,7 @@ button {
 .login-page-links {
   display: flex;
   justify-content: center;
+  font-size: 2em;
 }
 .login-page-links a{
   text-decoration: none;
@@ -98,7 +103,7 @@ width: 90%;
 display:block;
 margin: 0 auto;
 background-color: white;
-font-size: 1.2em;
+font-size: 2.5em;
 padding: 0.7em 1.4em;
 border-radius: 5px;
 border-style: none;
@@ -112,12 +117,46 @@ margin-bottom: 2%;
   display:block;
   margin: 0 auto;
   border-radius: 5px;
+  font-size: 2.2em;
 }
 
-#instructions{
-  margin: 5%;
+.instructions{
+
+  font-size: 1.2em;
 }
 
+#guide{
+  padding: 5%;
+  background-color:white;
+  margin: 0 auto;
+}
+
+#or {
+  padding:5%;
+  background-color:#035A5E;
+  color: white;
+  margin: 0 auto;
+}
+
+#or p{
+  text-align: right;
+  font-size: 2.0em;
+}
+
+.instructions h2{
+  font-size: 3.5em;
+  margin-top: 0;
+  padding-top: 7%;
+}
+
+.steps{
+  display:flex;
+}
+
+.step{
+  font-size: 2.0em;
+  margin-top: 0;
+}
 .number{
 border: solid 2px #035A5E;
 border-radius: 32px;
@@ -126,6 +165,8 @@ width: 65px;
 height: 65px;
 text-align: center;
 font-size: 3.0em;
+margin-top: 0;
+margin-right: 10px;
 }
 
 #map{
@@ -148,11 +189,14 @@ font-size: 3.0em;
 #waypoints input{
   flex-direction: column;
 }
-.route-tiles {
-  max-width: 40%;
-  border: 1px solid black;
+
+.route-tiles{
+  padding: 50px;
+  background-size: cover;
+  width: 40%;
+  margin: 5%;
 }
-.route-tiles img{
-max-width: 100%;
-/*height: 200px;*/
+.route-tiles a{
+  text-decoration: none;
+  color: white;
 }

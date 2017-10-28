@@ -8,10 +8,8 @@
   <body>
     <h1> Suggested Routes </h1>
     {{#route}}
-    <div class="route-tiles">
-    <h2> {{title}}</h2>
-    <a href="/premade-route"><img src={{img}}></a>
-    <p>{{details}}</p>
+    <div class="route-tiles" style="background-image:url({{img}})">
+    <a href="/premade-route"><h2> {{title}}</h2></a>
     </div>
     {{/route}}
 

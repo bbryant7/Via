@@ -33,10 +33,13 @@ function showMap(current) {
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   directionsService.route({
-    origin: "14835 Bescott Dr.",
-    destination: "11500 Jollyville Road",
+    origin: "10615 Metric Blvd",
+    destination: "3001 Industrial Terrace",
     waypoints: [{
-      location: "101 Baylor St. Austin, TX",
+      location: "10420 Metric Blvd",
+      stopover: true
+    },{
+      location: "2314 Rutland Dr",
       stopover: true
     }],
     optimizeWaypoints: true,
