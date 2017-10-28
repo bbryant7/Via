@@ -9,10 +9,6 @@ const userDataSchema = require('./models/userData')
 const data = require('./models/data.js')
 const app = express();
 
-
-
-
-
 // /---------------------------/
 
 app.engine('mustache', mustacheExpress());
@@ -117,8 +113,6 @@ app.get('/premade-route:id', function(req, res) {
   }
   res.render('premaderoute', {route: selected})
 })
-
-
 
 
 

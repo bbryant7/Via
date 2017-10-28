@@ -27,18 +27,18 @@ let data = [{
     },
   ],
   "map":{
-    "origin": "10615 Metric Blvd",
-    "destination": "3001 Industrial Terrace",
-    "waypoints": [{
-      "location": "10420 Metric Blvd",
-      "stopover": true
+    origin: "10615 Metric Blvd",
+    destination: "3001 Industrial Terrace",
+    waypoints: [{
+      location: "10420 Metric Blvd",
+      stopover: true
     },
     {
-      "location": "2314 Rutland Dr",
-      "stopover": true
+      location: "2314 Rutland Dr",
+      stopover: true
     }],
-    "optimizeWaypoints": true,
-    "travelMode": 'WALKING'
+    optimizeWaypoints: true,
+    travelMode: 'WALKING'
   }
 },
 {
@@ -75,20 +75,19 @@ let data = [{
     },
   ],
   "map":{
-    origin: "1506 S Congress Ave",
+    origin: "1720 S 1st Street austin ,tx",
     destination: "1415 S Congress Ave",
     waypoints: [{
-      location: "1300 S Congress Ave",
+      location: "1300 S congress Ave",
       stopover: true
     },
     {
       location: "1510 S Congress Ave",
       stopover: true
     },{
-      location: "1720 S 1st Street",
+      location: "1506 S congress Ave",
       stopover: true
     }],
-
     optimizeWaypoints: true,
     travelMode: 'WALKING'
   }

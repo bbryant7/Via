@@ -24,7 +24,6 @@
     {{/waypoints}}
   </ul>
   </div>
-  {{/route}}
 
   <div id="curated-map" style=" height:400px width: 5px;"></div>
   <nav>
@@ -34,9 +33,80 @@
     <a href= "#"> Log Out</a>
   </nav>
 
-  <script src="curatedmap.js"></script>
+{{#map}}
+  origin: "{{map.origin}}",
+  destination: "{{map.destination}}",
+  waypoints: [{{#map.waypoints}}{
+    location: "{{location}}",
+    stopover: true
+  },{{/map.waypoints}}],
+  optimizeWaypoints: true,
+  travelMode: "{{map.travelMode}}"
+  {{/map}}
+
+  <script>
+  navigator.geolocation.getCurrentPosition(displayLocation);
+  let latitude;
+  let longitude;
+  function displayLocation(position) {
+    // current coordinates
+    // latitude and longitude are numbers
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
+    let start = `"${latitude}, ${longitude}"`;
+    let current = new google.maps.LatLng(latitude, longitude)
+   console.log("displayLocation function ran");
+    showMap(current);
+
+  }
+
+  function showMap(current) {
+    let directionsService = new google.maps.DirectionsService;
+    let directionsDisplay = new google.maps.DirectionsRenderer;
+    let map = new google.maps.Map(document.getElementById('curated-map'), {
+      zoom: 12,
+      center: current
+    })
+    console.log('showMap function ran')
+    let marker = new google.maps.Marker({
+      position: current,
+      map: map
+    })
+
+    directionsDisplay.setMap(map);
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+    console.log('fire!');
+  }
+
+  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    directionsService.route({
+      {{#map}}
+        origin: "{{map.origin}}",
+        destination: "{{map.destination}}",
+        waypoints: [{{#map.waypoints}}{
+          location: "{{location}}",
+          stopover: true
+        },{{/map.waypoints}}],
+        optimizeWaypoints: true,
+        travelMode: "{{map.travelMode}}"
+        {{/map}}
+    }, function(response, status) {
+      if (status === 'OK') {
+
+        // visiual display of route legs
+          directionsDisplay.setDirections(response);
+
+          // }
+        console.log("woohooo!!")
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
+  }
+</script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCq04ArY70ba05n6sTkDx0VldkX1fVtCg">
   </script>
+{{/route}}
 </body>
 
 
