@@ -10,6 +10,9 @@ const data = require('./models/data.js')
 const app = express();
 
 
+
+
+
 // /---------------------------/
 
 app.engine('mustache', mustacheExpress());
@@ -104,16 +107,18 @@ app.get('/routesuggestions', function(req, res) {
 // PREMADE ROUTE - MAP PAGE
 
 app.get('/premade-route:id', function(req, res) {
-  // let routeid = parseInt(req.params.id);
-  // function findRoute(data){
-  //   return data.id === routeid
-  // console.log(routeid);
-  // console.log(data.id)
-  // }
-  //     data.find(findRoute)
-  //     console.log(data.find(findRoute))
-      res.render('premaderoute', {route: data})
-    })
+  console.log("banana")
+  let routeid = parseInt(req.params.id);
+  let selected = [];
+  for (var i = 0; i < data.length; i++) {
+    if(routeid === data[i].id){
+      selected.push(data[i])
+    }
+  }
+  res.render('premaderoute', {route: selected})
+})
+
+
 
 
 

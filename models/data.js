@@ -27,18 +27,18 @@ let data = [{
     },
   ],
   "map":{
-    origin: "10615 Metric Blvd",
-    destination: "3001 Industrial Terrace",
-    waypoints: [{
-      location: "10420 Metric Blvd",
-      stopover: true
+    "origin": "10615 Metric Blvd",
+    "destination": "3001 Industrial Terrace",
+    "waypoints": [{
+      "location": "10420 Metric Blvd",
+      "stopover": true
     },
     {
-      location: "2314 Rutland Dr",
-      stopover: true
+      "location": "2314 Rutland Dr",
+      "stopover": true
     }],
-    optimizeWaypoints: true,
-    travelMode: 'WALKING'
+    "optimizeWaypoints": true,
+    "travelMode": 'WALKING'
   }
 },
 {
