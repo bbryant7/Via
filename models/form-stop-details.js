@@ -17,7 +17,7 @@ const waypoints =  [
   },  {
   "id":"4",
   "name":"Barton Springs Pool/Zilker Park",
-  "description":"Barton Springs Pool is a recreational outdoor swimming pool that is filled entirely with water from nearby natural springs. It is located on the grounds of Zilker Park in Austin, Texas.",
+  "description":"Barton Springs Pool is a recreational outdoor swimming pool that is filled entirely with water from nearby natural springs.",
   "img":"https://images.unsplash.com/photo-1467581007859-478a3cee90e6?w=1489&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   },  {
   "id":"5",

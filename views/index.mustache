@@ -13,12 +13,23 @@
   <div class="wrapper">
   <h1>Via</h1>
   <h2> Find the spots you can't leave without seeing first! </h2>
-  <div class="waypoints-info">
-  </div>
  <div class=middle>
   <div id="form">
+    <div class="column-left">
+
       <h3>Create A Map</h3>
-      <p> Select the Austin hotspots you can't leave the city without seeing, and we'll make an easy map to help you get to know your city!</p>
+      <div class="steps">
+      <p><span>Step 1</span> Select Landmarks you want to see</p>
+    </div>
+    <div class="steps">
+      <p><span>Step 2</span> Enter your final destination. example: your home or hotel</p>
+    </div>
+    <div class="steps">
+    <p>  <span>Step 3</span> Press the "Make My Map" button, and we'll create an efficient route for you!</p>
+    </div>
+
+    </div>
+    <div class="column-right">
       <select multiple id="waypoints">
         <option value=" 1100 Congress Ave">State Capitol</option>
         <option value="110 Inner Campus Drive">UT Campus</option>
@@ -31,11 +42,10 @@
         <option value="2131 William Barton Dr">Barton Springs</option>
         <option value="Congress Ave">Congress Bat Bridge</option>
       </select>
-      <h3>End:</h3>
-    <select id="end">
-      <option value="Austin, TX">Austin, TX</option>
-    </select>
+      <input id="end" value="Austin, TX"></input>
+
     <button type="submit" id="submit">Make My Route</button>
+  </div>
   </div>
 
   <div class="stop-info">
@@ -44,7 +54,7 @@
     <img src={{img}} alt="image of {{name}}">
     <div class="deats">
     <h5>{{name}}</h5>
-    <P> {{description}}</p>
+    <!-- <P> {{description}}</p> -->
     </div>
     </div>
       {{/waypoints}}
