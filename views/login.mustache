@@ -11,20 +11,21 @@
 
 <body id=login-page>
   <div id="login">
-    <h1 class="splash"> Via </h1>
+    <h1 id="splash"> Via </h1>
     <p style="color:red"> {{error}} </p>
 
     <form action="/login" method="post">
       <input type="text" name="username" placeholder="Username">
       <input type="password" name="password" placeholder="Password">
-      <button class="sign-in" type="submit" name="button"> Sign In</button>
+      <button id="sign-in-button" type="submit" name="button"> Sign In</button>
     </form>
+
     <div class="login-page-links">
       <a href="#"> Forgot Password?</a>
       <a href="/registration"> Register </a>
     </div>
   </div>
-    
+
   <div class="instructions" id="guide">
     <h2> Guide to Making a Route</h2>
     <div class="steps">

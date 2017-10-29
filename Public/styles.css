@@ -23,6 +23,10 @@ body{
 	background: #D8E1E9;
   font-family: 'Lato', serif;
   line-height: 1.4;
+  margin: 0 auto;
+}
+
+.wrapper{
   margin: 5%;
 }
 
@@ -43,7 +47,6 @@ nav a:hover {
   color: #FD5635;
 
 }
-
 h1, h2, h3, h4 {
 font-family: 'Zilla Slab', serif;
 	font-weight: 700;
@@ -52,6 +55,35 @@ font-family: 'Zilla Slab', serif;
   margin-bottom: .5em;
   text-align: center;
 }
+
+h1.design {
+  font-family: helvetica;
+  font-weight: bold;
+  	font-size: 1.5em;
+padding-bottom: 30px;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #D8E1E9;
+  margin-bottom: 30px;
+}
+/* PARAGRAPH */
+
+
+h2 {font-size: 2.827em; font-weight: 500}
+
+h3 {font-size: 1.999em;}
+
+h4 {font-size: 1.414em;}
+
+h5 {font-size: 1em; text-transform: uppercase; font-weight: bold; letter-spacing: .15em; color: #65c1e5;}
+
+small {font-size: .95em; font-family: 'Zilla Slab';   color: #65c1e5;}
+
+p {
+  font-size: 1.0em;
+  margin-bottom: 1em;
+}
+
 
 button {
   display: inline-block;
@@ -70,13 +102,14 @@ button {
 	}
 }
 
+/*LOGIN PAGE*/
 #login{
   background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
   padding: 6%;
 
 }
 
-.splash {
+#splash {
   font-size: 5em;
 }
 #login-page{
@@ -91,7 +124,7 @@ button {
 .login-page-links a{
   text-decoration: none;
   color: #FD5635;
-  margin-right: 2%;
+  /*margin-right: 2%;*/
 }
 
 .login-page-links a:hover{
@@ -112,7 +145,7 @@ margin-bottom: 2%;
 
 }
 
-.sign-in{
+#sign-in-button{
   width: 90%;
   display:block;
   margin: 0 auto;
@@ -120,10 +153,9 @@ margin-bottom: 2%;
   font-size: 2.2em;
 }
 
-.instructions{
-
+/*.instructions{
   font-size: 1.2em;
-}
+}*/
 
 #guide{
   padding: 5%;
@@ -136,15 +168,11 @@ margin-bottom: 2%;
   background-color:#035A5E;
   color: white;
   margin: 0 auto;
-}
-
-#or p{
   text-align: right;
-  font-size: 2.0em;
 }
 
 .instructions h2{
-  font-size: 3.5em;
+  /*font-size: 3.5em;*/
   margin-top: 0;
   padding-top: 7%;
 }
@@ -154,13 +182,14 @@ margin-bottom: 2%;
 }
 
 .step{
-  font-size: 2.0em;
+  /*font-size: 2.0em;*/
   margin-top: 0;
 }
 .number{
-border: solid 2px #035A5E;
+border: solid 2px #FD5635;
 border-radius: 32px;
-background-color: white;
+background-color: #FD5635;;
+color: white;
 width: 65px;
 height: 65px;
 text-align: center;
@@ -169,6 +198,37 @@ margin-top: 0;
 margin-right: 10px;
 }
 
+/*INDEX PAGE*/
+
+.middle{
+  display:flex;
+}
+
+#form{
+  width: 35%;
+}
+.stop-info {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;;
+}
+
+.stop-info img{
+  width: 100%;
+}
+.card{
+background-color: white;
+width: 18%;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+text-align: center;
+margin: 1%
+}
+
+.deats h5, p {
+  margin:0;
+  padding: 5px;
+}
 #map{
   max-width: 100%;
   height: 500px;

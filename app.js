@@ -6,6 +6,7 @@ const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const userDataSchema = require('./models/userData')
+const waypoints = require('./models/form-stop-details.js')
 const data = require('./models/data.js')
 const app = express();
 
@@ -90,7 +91,7 @@ app.post('/registration', function(req, res) {
 
 // MAIN PAGE
 app.get('/', function(req, res) {
-    res.render('index');
+    res.render('index', {waypoints});
 
   })
 
