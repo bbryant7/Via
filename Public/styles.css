@@ -32,7 +32,7 @@ body{
 
 nav{
   background-color: #455051;
-  padding: 1%;
+  padding: 30px;
   display: flex;
 }
 
@@ -85,6 +85,10 @@ small {
   margin-bottom: 4%;
 }
 
+small:hover{
+  color:#981a02;
+}
+
 a {
   text-decoration: none;
 }
@@ -111,14 +115,14 @@ button {
   letter-spacing: .15em;
 	padding: 0.7em 1.4em;
   background: #035A5E;
-	border: 0 solid black;
+	border: 0 solid #035A5E;
   color: white;
   font-family: "Zilla Slab";
   margin-bottom: 10px;
 }
 
 button:hover{
-  background-color: #022729;
+  background-color: #023a3d;
 }
 
 /*LOGIN PAGE*/
@@ -149,7 +153,7 @@ button:hover{
 }
 
 .login-page-links a:hover{
-  color: #035A5E
+  color:#981a02;
 }
 
 .login-input{
