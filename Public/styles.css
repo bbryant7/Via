@@ -328,6 +328,9 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-size: cover;
   width: 100%;
 }
+.tile-title{
+text-shadow: black 1px 1px 8px, black 1px 1px 8px;
+}
 
 .route-tiles:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -335,6 +338,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .route-tiles a{
   text-decoration: none;
   color: white;
+
 }
 
 
