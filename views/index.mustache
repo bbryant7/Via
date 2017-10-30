@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"></link>
   <link rel="stylesheet" href="./styles.css"></link>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Zilla+Slab" rel="stylesheet">
   <title>Via</title>
 </head>
 
@@ -32,24 +33,25 @@
     </div>
     <div class="column-right">
       <select multiple id="waypoints">
-        <option value=" 1100 Congress Ave">State Capitol</option>
-        <option value="110 Inner Campus Drive">UT Campus</option>
-        <option value="1800 Congress Ave">Bob Bullok State History Museum</option>
+        <option value=" 1100 Congress Ave Austin, TX">State Capitol</option>
+        <option value="110 Inner Campus Drive Austin, TX">UT Campus</option>
+        <option value="1800 Congress Ave Austin, TX">Bob Bullok State History Museum</option>
         <option value="101 Baylor St. Austin, TX">Hope Outdoor Gallery</option>
-        <option value="713 Congress Ave">Paramount theatre</option>
-        <option value="407 E 6th St.">6th Street Bar District</option>
-        <option value="900 W Riverside Dr">Autotorium Shores</option>
-        <option value="817 W 5th St">Tiniest Bar in Texas</option>
-        <option value="2131 William Barton Dr">Barton Springs</option>
-        <option value="Congress Ave">Congress Bat Bridge</option>
+        <option value="713 Congress Ave Austin, TX">Paramount theatre</option>
+        <option value="407 E 6th St. Austin, TX">6th Street Bar District</option>
+        <option value="900 W Riverside Dr Austin, TX">Autotorium Shores</option>
+        <option value="817 W 5th St Austin, TX">Tiniest Bar in Texas</option>
+        <option value="2131 William Barton Dr Austin, TX">Barton Springs</option>
+        <option value="Congress Ave Austin, TX">Congress Bat Bridge</option>
       </select>
-      <small id="more-info"><small>More Info »</small>
+      <small id="more-info">More Info »</small>
       <input id="end" value="Austin, TX"></input>
 
     <button type="submit" id="submit">Make My Route</button>
   </div>
   </div>
   <div class="stop-info">
+
   </div>
 
 </div>
@@ -64,16 +66,17 @@
 <nav>
   <a href= "/"> Create Map</a>
   <a href= "/routesuggestions"> Suggested Routes</a>
-  <a href= "#"> More Info</a>
-  <a href= "#"> Log Out</a>
+  <a href= "/login"> More Info</a>
+  <a href= "/login"> Log Out</a>
 </nav>
-
-<script> let info = document.querySelector('.stop-info');
+<!--NOTE: I think this is getting blocked by the interceptor some how.  -->
+<script>
+let info = document.querySelector('.stop-info');
 document.getElementById('more-info').addEventListener('click', function() {
   let cards =
   `{{#waypoints}}
   <div class="card">
-  <img src={{img}} alt="image of {{name}}">
+  <img src={{img}} alt="photo of {{name}}">
   <div class="deats">
   <h5>{{name}}</h5>
   <P> {{description}}</p>

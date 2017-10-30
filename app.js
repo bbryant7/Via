@@ -95,10 +95,6 @@ app.get('/', function(req, res) {
 
   })
 
-// app.get('/moreinfo', function(req, res) {
-//       res.render('moreinfo', {waypoints});
-//
-//     })
 
 // SUGGESTIONPAGE
 app.get('/routesuggestions', function(req, res) {

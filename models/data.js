@@ -27,14 +27,14 @@ let data = [{
     },
   ],
   "map":{
-    origin: "10615 Metric Blvd",
-    destination: "3001 Industrial Terrace",
+    origin: "10615 Metric Blvd Austin, TX",
+    destination: "3001 Industrial Terrace Austin, TX",
     waypoints: [{
-      location: "10420 Metric Blvd",
+      location: "10420 Metric Blvd Austin, TX",
       stopover: true
     },
     {
-      location: "2314 Rutland Dr",
+      location: "2314 Rutland Dr Austin, TX",
       stopover: true
     }],
     optimizeWaypoints: true,
@@ -76,16 +76,16 @@ let data = [{
   ],
   "map":{
     origin: "1720 S 1st Street austin ,tx",
-    destination: "1415 S Congress Ave",
+    destination: "1415 S Congress Ave Austin, TX",
     waypoints: [{
-      location: "1300 S congress Ave",
+      location: "1300 S congress Ave Austin, TX",
       stopover: true
     },
     {
-      location: "1510 S Congress Ave",
+      location: "1510 S Congress Ave Austin, TX",
       stopover: true
     },{
-      location: "1506 S congress Ave",
+      location: "1506 S congress Ave Austin, TX",
       stopover: true
     }],
     optimizeWaypoints: true,
@@ -96,7 +96,7 @@ let data = [{
 {
   "id": 3,
   "title":"South-side Spots",
-  "details":"Get out of the city center and see what south Austin has to offer.",
+  "details":"Coming Soon.",
   "img":"http://www.videocityguide.com/austin/PCWUploads/South%20Congress%20Avenue%20Shopping/thumbnails/g14.jpg",
 
 }
