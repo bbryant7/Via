@@ -29,6 +29,7 @@ body{
 
 .wrapper{
   margin: 5%;
+  padding-bottom: 100px;
 }
 
 nav{
@@ -64,13 +65,26 @@ font-family: 'Zilla Slab', serif;
 
 h1{
   font-weight: bold;
-  text-shadow: white 1px 1px 8px, white 1px 1px 8px;
+  color: #455051;
+    text-shadow: white 1px 1px 8px, white 1px 1px 8px;
   /*font-size: 2.2em;*/
   text-align: center;
   width: 100%;
-  /*border-bottom: 1px solid #D8E1E9;
-  margin-bottom: 30px;*/
 }
+/*h1{
+  font-weight: bold;
+  text-shadow: black 1px 1px 8px, black 1px 1px 8px;
+  color: white;
+  background-color: #455051;
+  padding:10px;
+  font-size: 2.2em;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}*/
 /* PARAGRAPH */
 /*
 
@@ -134,33 +148,30 @@ button:hover{
 
 /*LOGIN PAGE*/
 
-#blur-img{
-position: absolute;
-}
 #login{
   background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?w=1326&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
-  padding: 6%;
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-
+  padding: 4em 5%;
+  background-size: cover;
 }
 
 #splash {
   font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 #login-page{
   margin: 0 auto;
+  background-color: #035A5E;
 }
 
 .login-page-links {
   display: flex;
   justify-content: center;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .login-page-links a{
   text-decoration: none;
   color: #FD5635;
-  /*margin-right: 2%;*/
 }
 
 .login-page-links a:hover{
@@ -186,32 +197,29 @@ margin-bottom: 2%;
   display:block;
   margin: 0 auto;
   border-radius: 5px;
-  font-size: 2.2em;
+  font-size: 2.5em;
 }
 
-/*.instructions{
-  font-size: 1.2em;
-}*/
+.instructions h2{
+  margin-top: 0;
+  padding-top: 0;
+}
 
 #guide{
-  padding: 5%;
+  padding: 2em 5%;
   background-color:white;
   margin: 0 auto;
+
 }
 
 #or {
-  padding:5%;
+  padding:2em 5%;
   background-color:#035A5E;
   color: white;
   margin: 0 auto;
   text-align: right;
 }
 
-.instructions h2{
-  /*font-size: 3.5em;*/
-  margin-top: 0;
-  padding-top: 7%;
-}
 
 .steps{
   display:flex;
@@ -352,16 +360,6 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 text-shadow: black 1px 1px 8px, black 1px 1px 8px;
 }
 
-.route-tiles a h2.new-title span{
-  position: relative;
-  content: {{title}};
-}
-.route-tiles:hover a h2.new-title span{
-  display: none;
-}
-.route-tiles:hover a h2.new-title:after{
-    content: {{details}};
-}
 
 .route-tiles a{
   text-decoration: none;
@@ -396,8 +394,45 @@ text-shadow: black 1px 1px 8px, black 1px 1px 8px;
 /* Larger than tablet */
 @media (min-width: 960px) {
   .wrapper{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  body{
+    font-size: 150%;
+  }
+
+  nav{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+  }
+
+  .login-input {
+  width: 60%;
+  font-size: 1.5em;
+
+  }
+
+  #sign-in-button{
+    width: 60%;
+    font-size: 1.5em;
+  }
+
+  #guide{
+    padding: 5em 5%;
+
+
+  }
+
+  #or {
+    padding:5em 5%;
+
+  }
+
+
+  #forms .stop-info .map{
+    margin-bottom: 3%;
   }
   .card{
     width: 18%;
@@ -410,54 +445,13 @@ text-shadow: black 1px 1px 8px, black 1px 1px 8px;
   .route-tiles{
       width: 48%;
       margin: 1%;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     .premade-card{
       width: 48%;
+      padding: 25px 15px;
     }
 
 }
-
-
-/*MEDIA QUERRY
-.middle{
-  display:flex;
-}
-
-#form{
-  width: 35%;
-}
-
-select {
-  border: 0px solid;
-  height: 200px;
-}
-  option {
-    background: #D8E1E9;
-    font-size: 1em; text-transform: uppercase; font-weight: bold;
-    padding-bottom: 20px;
-  }
-
-
-.stop-info {
-  width: 65%;
-  display: flex;
-  flex-wrap: wrap;;
-}
-
-.stop-info img{
-  width: 100%;
-}
-.card{
-background-color: white;
-width: 18%;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
-text-align: center;
-margin: 1%
-}
-
-.deats h5, p {
-  margin:0;
-  padding: 5px;
-}*/
