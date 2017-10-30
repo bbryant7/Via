@@ -6,10 +6,9 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"></link>
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css?family=Chewy|Lato" rel="stylesheet">
-  </head>
   {{#route}}
   <title>{{title}}</title>
-
+</head>
 
 <body>
 <div class="wrapper">
@@ -26,7 +25,7 @@
   </ul>
   </div>
 
-  <div id="curated-map" style=" height:400px width: 5px;"></div>
+  <div id="curated-map" class="map"></div>
 </div>
   <nav>
     <a href= "/"> Create Map</a>
@@ -34,17 +33,6 @@
     <a href= "#"> More Info</a>
     <a href= "#"> Log Out</a>
   </nav>
-
-{{#map}}
-  origin: "{{map.origin}}",
-  destination: "{{map.destination}}",
-  waypoints: [{{#map.waypoints}}{
-    location: "{{location}}",
-    stopover: true
-  },{{/map.waypoints}}],
-  optimizeWaypoints: true,
-  travelMode: "{{map.travelMode}}"
-  {{/map}}
 
   <script>
   navigator.geolocation.getCurrentPosition(displayLocation);

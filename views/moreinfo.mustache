@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"></link>
+    <link rel="stylesheet" href="./styles.css"></link>
+    <title>Stops</title>
+  </head>
+  <body>
+    <div class="wrapper">
+    <div class="stop-info">
+      {{#waypoints}}
+      <div class="card">
+      <img src={{img}} alt="image of {{name}}">
+      <div class="deats">
+      <h5>{{name}}</h5>
+      <P> {{description}}</p>
+      </div>
+      </div>
+        {{/waypoints}}
+    </div>
+  </div>
+    <nav>
+      <a href= "/"> Create Map</a>
+      <a href= "/routesuggestions"> Suggested Routes</a>
+      <a href= "#"> More Info</a>
+      <a href= "#"> Log Out</a>
+    </nav>
+  </body>
+</html>

@@ -22,7 +22,7 @@ function displayLocation(position) {
 function showMap(current) {
   let directionsService = new google.maps.DirectionsService;
   let directionsDisplay = new google.maps.DirectionsRenderer;
-  let map = new google.maps.Map(document.getElementById('map'), {
+  let map = new google.maps.Map(document.getElementById('make-map'), {
     zoom: 12,
     center: current
   })

@@ -50,7 +50,7 @@ nav a:hover {
 h1, h2, h3, h4 {
 font-family: 'Zilla Slab', serif;
 	font-weight: 700;
-	line-height: 1.1;
+	/*line-height: 1.1;*/
     /*font-size: 3.998em;*/
   margin-bottom: .5em;
   text-align: center;
@@ -59,32 +59,46 @@ font-family: 'Zilla Slab', serif;
 h1{
   font-family: helvetica;
   font-weight: bold;
-  font-size: 1.5em;
+  /*font-size: 2.2em;*/
   text-align: center;
   width: 100%;
   /*border-bottom: 1px solid #D8E1E9;
   margin-bottom: 30px;*/
 }
 /* PARAGRAPH */
-
+/*
 
 h2 {font-size: 1.8em; font-weight: 500}
 
-h3 {font-size: 1.999em;}
+h3 {font-size: 1.5em;}
 
-h4 {font-size: 1.414em;}
+h4 {font-size: 1.414em;}*/
 
-h5 {font-size: .8em; text-transform: uppercase; font-weight: bold; letter-spacing: .15em; color: #65c1e5;}
+h5 {
+  font-size: .8em;
+  text-transform: uppercase; font-weight: bold; letter-spacing: .15em; color: #65c1e5;}
+
+small {
+  font-size: .95em;
+  font-family: 'Zilla Slab';
+  color: #FD5635;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
 
 span{
-  font-size: 1 em;
+  font-size: 1.1 em;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: .15em;
   color: #65c1e5;
 }
 
-small {font-size: .95em; font-family: 'Zilla Slab';   color: #65c1e5;}
+
+
 
 p {
   font-size: 1.0em;
@@ -104,6 +118,10 @@ button {
   color: white;
   font-family: "Zilla Slab";
   margin-bottom: 10px;
+}
+
+button:hover{
+  background-color: #022729;
 }
 
 /*LOGIN PAGE*/
@@ -204,21 +222,34 @@ margin-right: 10px;
 
 /*INDEX PAGE*/
 
-
+.header{
+  margin-bottom: 5%;
+}
 #form{
   margin-top: 2%;
   display:flex;
+  margin-bottom: 5%;
 }
 
-#form h3{
-  margin-top: 0;
+.column-left h3{
+margin-top: -14px;
+margin-left: 15px;
+width: 150px;
+background: #D8E1E9;
+
 }
 
 .column-left{
-  width: 60%;
+width: 60%;
+font-size: 1.1em;
+border: 1px solid #035A5E;
+margin-right: 2%;
+padding-left: 10px;
+background-color: white;
 }
 
 .column-right{
+
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -239,7 +270,8 @@ option {
     font-size: 1.0em; text-transform: uppercase; font-weight: bold;
     padding: 5px;
     margin-bottom: 10px;
-      color: #455051;
+    border: 1px solid #035A5E;
+    color: #455051;
   }
 
 
@@ -249,6 +281,7 @@ option {
   width: 100%;
   display: flex;
   flex-wrap: wrap;;
+  margin-bottom: 5%;
 }
 
 .stop-info img{
@@ -256,7 +289,7 @@ option {
 }
 .card{
 background-color: white;
-width: 18%;
+width: 48%;
 border-bottom-right-radius: 5px;
 border-bottom-left-radius: 5px;
 text-align: center;
@@ -268,16 +301,11 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin:0;
   padding: 5px;
 }
-#map{
+.map{
   max-width: 100%;
-  height: 500px;
+  height: 700px;
+  margin-bottom: 5%;
 }
-
-#curated-map{
-  max-width: 90%;
-  height: 500px;
-}
-
 
 #waypoints{
   display:flex;

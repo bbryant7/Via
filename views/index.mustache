@@ -4,22 +4,23 @@
 <head>
   <meta charset="utf-8">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"></link>
-  <!-- <link rel="stylesheet" href="./skeleton.css"></link> -->
   <link rel="stylesheet" href="./styles.css"></link>
   <title>Via</title>
 </head>
 
 <body>
   <div class="wrapper">
+  <div class="header">
   <h1>Via</h1>
-  <h2> Find the spots you can't leave without seeing first! </h2>
+  <h2> Find the spots you can't leave Austinwithout seeing! </h2>
+</div>
  <div class=middle>
   <div id="form">
     <div class="column-left">
 
       <h3>Create A Map</h3>
       <div class="steps">
-      <p><span>Step 1</span> Select Landmarks you want to see</p>
+      <p><span>Step 1</span> Select landmarks you want to add to your route.</p>
     </div>
     <div class="steps">
       <p><span>Step 2</span> Enter your final destination. example: your home or hotel</p>
@@ -42,27 +43,19 @@
         <option value="2131 William Barton Dr">Barton Springs</option>
         <option value="Congress Ave">Congress Bat Bridge</option>
       </select>
+      <small id="more-info"><small>More Info »</small>
       <input id="end" value="Austin, TX"></input>
 
     <button type="submit" id="submit">Make My Route</button>
   </div>
   </div>
-
   <div class="stop-info">
-    {{#waypoints}}
-    <div class="card">
-    <img src={{img}} alt="image of {{name}}">
-    <div class="deats">
-    <h5>{{name}}</h5>
-    <!-- <P> {{description}}</p> -->
-    </div>
-    </div>
-      {{/waypoints}}
   </div>
+
 </div>
 
 
-<div id="map"></div>
+<div id="make-map" class="map"></div>
 
 <form id="save-form">
   <button type="submit" id="submit">Save My Route</button>
@@ -75,7 +68,22 @@
   <a href= "#"> Log Out</a>
 </nav>
 
-
+<script> let info = document.querySelector('.stop-info');
+document.getElementById('more-info').addEventListener('click', function() {
+  let cards =
+  `{{#waypoints}}
+  <div class="card">
+  <img src={{img}} alt="image of {{name}}">
+  <div class="deats">
+  <h5>{{name}}</h5>
+  <P> {{description}}</p>
+  </div>
+  </div>
+    {{/waypoints}}`
+  info.innerHTML = cards
+  console.log("cards added");
+})
+</script>
   <script src="map.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCq04ArY70ba05n6sTkDx0VldkX1fVtCg">
   </script>
