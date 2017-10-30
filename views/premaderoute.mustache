@@ -5,24 +5,26 @@
   <meta charset="utf-8">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"></link>
   <link rel="stylesheet" href="./styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Chewy|Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Zilla+Slab:500,500i,700,700i" rel="stylesheet">
   {{#route}}
   <title>{{title}}</title>
 </head>
 
-<body style="background-image:url({{img}})">
+<body class="image-bg" style="background-image:url({{img}})">
 <div class="wrapper">
   <h1> {{title}}</h1>
-  <h2> {{details}}</h2>
+  <!-- <h2> {{details}}</h2> -->
   <div class="waypoints-info">
-    <ul>
+    <div class="stop-info">
     {{#waypoints}}
-    <li>
-    {{name}}
-    {{description}}
-    </li>
+    <div class="card">
+    <div class="deats">
+    <h5>{{name}}</h5>
+    <p>{{description}}</p>
+    </div>
+  </div>
     {{/waypoints}}
-  </ul>
+  </div>
   </div>
 
   <div id="curated-map" class="map"></div>
