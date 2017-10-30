@@ -19,6 +19,7 @@ colors: #70CDCC (blue) or #00B9AD
 }
 
 body{
+  font-size: 110%;
   color: #455051;
 	background: #D8E1E9;
   font-family: 'Lato', sans-serif;
@@ -369,7 +370,7 @@ text-shadow: black 1px 1px 8px, black 1px 1px 8px;
 
 
 /* Larger than mobile */
-@media (min-width: 475px) {
+@media (min-width:600px) {
 
   #form{
   display: flex;
@@ -393,7 +394,7 @@ text-shadow: black 1px 1px 8px, black 1px 1px 8px;
 }
 
 /* Larger than tablet */
-@media (min-width: 750px) {
+@media (min-width: 960px) {
   .wrapper{
     margin-left: 10%;
     margin-right: 10%;
