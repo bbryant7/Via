@@ -53,6 +53,7 @@ nav a:hover {
 }
 h1, h2, h3, h4 {
 font-family: 'Zilla Slab', serif;
+
 	font-weight: 700;
 	/*line-height: 1.1;*/
     /*font-size: 3.998em;*/
@@ -62,6 +63,7 @@ font-family: 'Zilla Slab', serif;
 
 h1{
   font-weight: bold;
+  text-shadow: white 1px 1px 8px, white 1px 1px 8px;
   /*font-size: 2.2em;*/
   text-align: center;
   width: 100%;
@@ -331,14 +333,16 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 50px;
   background-size: cover;
   width: 100%;
+  margin-bottom: 2%;
+}
+
+.route-tiles:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.58);
 }
 .tile-title{
 text-shadow: black 1px 1px 8px, black 1px 1px 8px;
 }
 
-.route-tiles:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 .route-tiles a{
   text-decoration: none;
   color: white;

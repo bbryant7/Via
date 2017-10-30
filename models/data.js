@@ -92,14 +92,32 @@ let data = [{
     travelMode: 'WALKING'
   }
 
-},
-{
+},{
   "id": 3,
-  "title":"South-side Spots",
+  "title":"South-Side Spots",
   "details":"Coming Soon.",
   "img":"http://www.videocityguide.com/austin/PCWUploads/South%20Congress%20Avenue%20Shopping/thumbnails/g14.jpg",
 
+},{
+"id": 4,
+"title":"Place for Pups",
+"details":"Coming Soon.",
+"img":"https://images.unsplash.com/photo-1433162653888-a571db5ccccf?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
+
+},{
+"id": 5,
+"title":"Live Music on the Menu",
+"details":"Coming Soon.",
+"img":"https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
+
+},{
+"id": 6,
+"title":"Keep Austin Weirder",
+"details":"Coming Soon.",
+"img":"https://images.unsplash.com/photo-1458349726531-234ad56ba80f?auto=format&fit=crop&w=1360&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
+
 }
+
 ]
 
 
