@@ -15,12 +15,28 @@
   <body>
   <div class="wrapper">
     <h1> Suggested Routes </h1>
+    <div class="selection">
     {{#route}}
     <div class="route-tiles" style="background-image:url({{img}})">
-    <a href="/premade-route{{id}}"><h2 class="tile-title"> {{title}}</h2></a>
+    <a href="/premade-route{{id}}">
+      <h2 class="tile-title new-title"> <span=class"align">{{title}}</span></h2>
+    </a>
     </div>
+    <style>
+    .route-tiles a h2.new-title span{
+      position: relative;
+      content: {{title}};
+    }
+    .route-tiles:hover a h2.new-title span{
+      display: none;
+    }
+    .route-tiles:hover a h2.new-title:after{
+        content: {{details}};
+    }
+    </style>
     {{/route}}
   </div>
+</div>
 
   <script src="suggestedmap.js"></script>
   </body>
