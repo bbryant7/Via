@@ -9,7 +9,12 @@
   {{#route}}
   <title>{{title}}</title>
 </head>
-
+<nav>
+  <a href= "/"> Create Map</a>
+  <a href= "/routesuggestions"> Suggested Routes</a>
+  <a href= "/login"> More Info</a>
+  <a href= "/login"> Log Out</a>
+</nav>
 <body class="image-bg" style="background-image:url({{img}})">
 <div class="wrapper">
   <h1> {{title}}</h1>
@@ -29,12 +34,6 @@
 
   <div id="curated-map" class="map"></div>
 </div>
-  <nav>
-    <a href= "/"> Create Map</a>
-    <a href= "/routesuggestions"> Suggested Routes</a>
-    <a href= "#"> More Info</a>
-    <a href= "#"> Log Out</a>
-  </nav>
 
   <script>
   navigator.geolocation.getCurrentPosition(displayLocation);
