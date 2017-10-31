@@ -56,19 +56,31 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, position
     }
   }
 
-let restarauntOptions = document.getElementById('restaraunt')
-let end;
-  for (var i = 0; i < restarauntOptions.length; i++) {
-    if (restarauntOptions.options[i].selected) {
-      end = document.getElementById('end').value;
-    } else {
-      end = document.getElementById('restaraunt').value;
-    }
-  }
+// let restarauntOptions = document.getElementById('restaraunt')
+// let end;
+//   for (var i = 0; i < restarauntOptions.length; i++) {
+//     if (document.getElementById("end".value) {
+//       end = document.getElementById('end').value;
+//     } else if (restarauntOptions.options[i].selected.value !== "skip") {
+//       end = document.getElementById('restaraunt').value;
+//     }
+//   }
 
-  console.log(waypoints)
-  console.log(end)
-  console.log(start)
+// document.getElementById("restaraunt").disabled = true;
+// document.getElementById("end").disabled = true;
+
+let end;
+   if (document.getElementById("end").value != "" || document.getElementById("end").value.length > 0) {
+      end = document.getElementById("end").value;
+   } else {
+     end = document.getElementById("restaraunt").value;
+   }
+   console.log("way",waypoints)
+   console.log("dest",end)
+   console.log("rest",document.getElementById('restaraunt').value)
+   console.log("input",document.getElementById('end').value)
+   console.log("start",start)
+
   directionsService.route({
     origin: start,
     destination: end,
@@ -80,8 +92,10 @@ let end;
       directionsDisplay.setDirections(response);
 
       console.log("woohooo!!")
+
     } else {
       window.alert('Directions request failed due to ' + status);
     }
   });
+
 }
