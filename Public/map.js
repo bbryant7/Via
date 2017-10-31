@@ -43,7 +43,7 @@ function showMap(current) {
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay, position) {
   console.log("are you calculating??")
-  let start = `"${latitude}, ${longitude}"`;
+  let start = `${latitude}, ${longitude}`;
   console.log("start", start);
   let waypoints = [];
   let waypointsOptions = document.getElementById('waypoints');
@@ -55,20 +55,6 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, position
       });
     }
   }
-
-// let restarauntOptions = document.getElementById('restaraunt')
-// let end;
-//   for (var i = 0; i < restarauntOptions.length; i++) {
-//     if (document.getElementById("end".value) {
-//       end = document.getElementById('end').value;
-//     } else if (restarauntOptions.options[i].selected.value !== "skip") {
-//       end = document.getElementById('restaraunt').value;
-//     }
-//   }
-
-// document.getElementById("restaraunt").disabled = true;
-// document.getElementById("end").disabled = true;
-
 let end;
    if (document.getElementById("end").value != "" || document.getElementById("end").value.length > 0) {
       end = document.getElementById("end").value;
@@ -79,15 +65,18 @@ let end;
    console.log("dest",end)
    console.log("rest",document.getElementById('restaraunt').value)
    console.log("input",document.getElementById('end').value)
-   console.log("start",start)
+   console.log("start2",start)
 
-  directionsService.route({
-    origin: start,
-    destination: end,
-    waypoints: waypoints,
-    optimizeWaypoints: true,
-    travelMode: 'DRIVING'
-  }, function(response, status) {
+  directionsService.route(
+    {
+      origin: start,
+      destination: end,
+      waypoints: waypoints,
+      optimizeWaypoints: true,
+      travelMode: 'WALKING'
+    }
+
+  , function(response, status) {
     if (status === 'OK') {
       directionsDisplay.setDirections(response);
 
