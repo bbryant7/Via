@@ -17,12 +17,12 @@ let data = [{
     },  {
     "id":"3",
     "name":"4th Tap",
-    "description":"Spacious worker-owned microbrewery with picnic tables & a projector screen in an industrial taproom",
+    "description":"Spacious worker-owned microbrewery with picnic tables & a projector screen in an industrial taproom.",
     "img":""
     },  {
     "id":"4",
     "name":"Austin Beer Works",
-    "description":"Vibrant brewery crafting beers such as IPAs & ales, plus offering tours & tastings",
+    "description":"Vibrant brewery crafting beers such as IPAs & ales, plus offering tours & tastings.",
     "img":""
     },
   ],
@@ -60,12 +60,12 @@ let data = [{
     },  {
     "id":"3",
     "name":"Yard Dog Art Gallery",
-    "description":"Yard dog presents a wide variety of pieces from artists across North America",
+    "description":"Yard dog presents a wide variety of pieces from artists across North America.",
     "img":""
     },  {
     "id":"4",
     "name":"Greetings From Austin Mural",
-    "description":"Austin landmark Mural",
+    "description":"Austin landmark Mural.",
     "img":""
     }, {
     "id":"5",
