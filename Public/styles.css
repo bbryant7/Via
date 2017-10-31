@@ -32,6 +32,23 @@ body{
   padding-bottom: 100px;
 }
 
+.logo {
+  max-width: 110px;
+  margin-top: -14px;
+}
+
+.dot {
+  fill: transparent;
+}
+
+.dot-outline {
+  fill: white;
+}
+
+.via-text {
+  fill: white;
+}
+
 nav{
   background-color: #455051;
   padding: 30px;
@@ -42,11 +59,23 @@ nav{
   right: 0;
 }
 
+nav .logo {
+  flex-grow: 1;
+  width: 75px;
+  margin-right: 100px;
+
+}
+
+.nav-links{
+display:flex;
+flex-grow: 3;
+}
+
 nav a {
   text-decoration: none;
   color: white;
-  flex-grow: 1;
   text-align: center;
+  flex-grow: 1;
 }
 
 nav a:hover {
