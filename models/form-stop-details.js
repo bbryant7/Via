@@ -7,12 +7,12 @@ const waypoints =  [
   },{
   "id":"2",
   "name": "Auditorium Shores",
-  "description":"Massive brewery with Belgian-style ales offering weekend tours, happy hour plus seafood truck.",
+  "description":"Auditorium Shores is an urban park located in downtown Austin, Texas, within the larger Town Lake Park.",
   "img":"https://images.unsplash.com/photo-1499446006265-e90482c49025?w=925&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   },{
   "id":"3",
   "name": "Austin Bat Bridge",
-  "description": "Taproom featuring beers, on-site food trucks & live music in a large, industrial space.",
+  "description": "From March to November every year, bat enthusiasts gather to be mesmorized by the South Congress Bridge Bats' aerial show",
   "img":"https://images.unsplash.com/photo-1489365767061-5c077c136bd1?w=1050&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   },  {
   "id":"4",
@@ -22,32 +22,32 @@ const waypoints =  [
   },  {
   "id":"5",
   "name":"Hope Outdoor Gallery",
-  "description":"",
+  "description":"Unique outdoor community park providing space for colorful murals with inspirational messaging. Bring your own spray paint!",
   "img":"https://images.unsplash.com/photo-1497027739931-7a96244c300f?w=1338&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   },{
   "id":"6",
   "name": "Paramount Theatre",
-  "description":"Massive brewery with Belgian-style ales offering weekend tours, happy hour plus seafood truck.",
+  "description":"The classical revival style structure is a live theatre venue/movie theatre located in downtown Austin, Texas.",
   "img":"https://images.unsplash.com/photo-1507924538820-ede94a04019d?w=1350&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   },{
   "id":"7",
   "name": "Texas State Capitol",
-  "description":"Massive brewery with Belgian-style ales offering weekend tours, happy hour plus seafood truck.",
+  "description":"Capitol building for the state of Texas.",
   "img":"https://images.unsplash.com/photo-1496112872005-7bb0b50dad9c?w=1351&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   },{
   "id":"8",
   "name": "Texas State History Museum",
-  "description":"Massive brewery with Belgian-style ales offering weekend tours, happy hour plus seafood truck.",
+  "description":"The Bullock Texas State History Museum, is a history museum in Austin, Texas.Its stated mission is to tell the Story of Texas.",
   "img":"https://images.unsplash.com/photo-1459111461138-7dc2df20e792?w=1350&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   },{
   "id":"9",
   "name": "Tiniest Bar in Texas",
-  "description":"Massive brewery with Belgian-style ales offering weekend tours, happy hour plus seafood truck.",
-  "img":"https://images.unsplash.com/photo-1459111461138-7dc2df20e792?w=1350&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+  "description":"Snug, dog-friendly watering hole with a patio, a food truck on-site & happy hour specials.",
+  "img":"https://images.unsplash.com/photo-1468072114808-903e572b8ead?auto=format&fit=crop&w=1266&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   },{
   "id":"10",
   "name": "Univerisity of Texas at Austin",
-  "description":"Massive brewery with Belgian-style ales offering weekend tours, happy hour plus seafood truck.",
+  "description":"The University of Texas at Austin is a public research university and the flagship institution of the University of Texas System.",
   "img":"https://images.unsplash.com/photo-1499957430036-41954fa8391d?dpr=1&auto=format&fit=crop&w=767&h=511&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   }
 ]
