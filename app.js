@@ -95,6 +95,11 @@ app.get('/', function(req, res) {
 
   })
 
+// LOGIN LIKE
+  app.get('/login', function(req, res){
+  res.render('login')
+})
+
 
 // SUGGESTIONPAGE
 app.get('/routesuggestions', function(req, res) {
