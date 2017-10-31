@@ -11,7 +11,7 @@ let data = [{
     "img":""
     },{
     "id":"2",
-    "name": "Oscar Blues",
+    "name": "Oskar Blues Brewery",
     "description": "Taproom featuring beers, on-site food trucks & live music in a large, industrial space.",
     "img":""
     },  {

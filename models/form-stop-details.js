@@ -37,7 +37,7 @@ const waypoints =  [
   },{
   "id":"8",
   "name": "Texas State History Museum",
-  "description":"The Bullock Texas State History Museum, is a history museum in Austin, Texas.Its stated mission is to tell the Story of Texas.",
+  "description":"The Bullock Texas State History Museum, is a history museum in Austin, Texas. Its stated mission is to tell the Story of Texas.",
   "img":"https://images.unsplash.com/photo-1459111461138-7dc2df20e792?w=1350&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
   },{
   "id":"9",
