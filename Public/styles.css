@@ -463,8 +463,8 @@ text-shadow: black 1px 1px 8px, black 1px 1px 8px;
   .route-tiles{
       width: 48%;
       margin: 1%;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
 
     .premade-card{
