@@ -276,6 +276,16 @@ margin-bottom: 4%;
   flex-direction: column;
 }
 
+#waypoints{
+  display:flex;
+  flex-direction: column;
+  height: 120px;
+}
+
+#waypoints input{
+  flex-direction: column;
+}
+
 select {
   border: 1px solid #455051;
   height: 250px;
@@ -296,6 +306,18 @@ option {
     margin-bottom: 4%;
     border: 1px solid #035A5E;
     color: #455051;
+  }
+
+  #restaraunt{
+    height: 35px;
+    font-size: .8em;
+    font-size: .8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 2px 10px 2px;
+    color: #455051;
+    background-color: white;
+    margin-bottom: 4%;
   }
 
 .image-bg{
@@ -334,16 +356,8 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 700px;
   margin-bottom: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#waypoints{
-  display:flex;
-  flex-direction: column;
-  height: 120px;
-}
-
-#waypoints input{
-  flex-direction: column;
+  position: relative;
+  z-index: -1;
 }
 
 .route-tiles{
@@ -369,6 +383,10 @@ text-shadow: black 1px 1px 8px, black 1px 1px 8px;
 
 /* Larger than mobile */
 @media (min-width:600px) {
+
+  h1{
+    padding-top: 65px;
+  }
 
   #form{
   display: flex;
