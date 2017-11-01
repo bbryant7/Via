@@ -32,13 +32,22 @@ body{
   padding-bottom: 100px;
 }
 
+.logo-wrapper{
+  display: flex;
+}
 .logo {
   max-width: 110px;
   margin-top: -14px;
+
+}
+
+.login-logo{
+max-width: 300px;
+justify-content: center;
 }
 
 .dot {
-  fill: transparent;
+  fill: #FA5934;
 }
 
 .dot-outline {
@@ -197,6 +206,7 @@ button:hover{
   display: flex;
   justify-content: center;
   font-size: 1.5em;
+  text-shadow: white 1px 1px 8px, white 7px 1px 7px;
 }
 .login-page-links a{
   text-decoration: none;
